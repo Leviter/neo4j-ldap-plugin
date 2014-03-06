@@ -75,7 +75,7 @@ public class LDAPAuthenticationRule implements SecurityRule {
 						boolean isMemberOfGroup = (Configuration.isCheckUserGroup() && userIsMemberOfGroup(attributes.get(MEMBER_OF))) || (!Configuration.isCheckUserGroup());
 
 						if (isMemberOfGroup) {
-							LDAPAuthenticationRule.log.debug("Authenticating user");
+							log.debug("Authenticating user");
 
 							env.put(Context.SECURITY_PRINCIPAL, distinguishedName);
 							env.put(Context.SECURITY_CREDENTIALS, credentials[1]);
@@ -86,7 +86,7 @@ public class LDAPAuthenticationRule implements SecurityRule {
 						}
 					}
 				} catch (NamingException e) {
-					LDAPAuthenticationRule.log.error("Failed connecting/authenticating to LDAP", e);
+					log.error("Failed connecting/authenticating to LDAP", e);
 				} finally {
 					if (ctx != null) {
 						try {
@@ -127,7 +127,7 @@ public class LDAPAuthenticationRule implements SecurityRule {
 	}
 
 	private boolean userIsMemberOfGroup(Attribute memberOfAttribute) throws NamingException {
-		LDAPAuthenticationRule.log.debug("Checking if user is member of group");
+		log.debug("Checking if user is member of group");
 
 		NamingEnumeration groups = memberOfAttribute.getAll();
 
@@ -135,7 +135,7 @@ public class LDAPAuthenticationRule implements SecurityRule {
 			String group = (String) groups.next();
 
 			if (group.equals(Configuration.getUserMemberOfGroup())) {
-				LDAPAuthenticationRule.log.debug("User is a member!");
+				log.debug("User is a member!");
 				return true;
 			}
 		}
