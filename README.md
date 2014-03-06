@@ -3,9 +3,9 @@ Configuration of the LDAP plugin extension
 
 It is required that you have sessions enabled for the web server since the extension depends on it.
 
-Create the jar file by using a `mvn clean package`
-Copy the jar file from the target directory into the Neo4J installation's 'plugins' directory
-Download the 'commons-codec-1.9.jar' and store it with the plugin in the 'plugins' directory
+- Create the jar file by using a `mvn clean package`
+- Copy the jar file from the target directory into the Neo4J installation's 'plugins' directory
+- Download the 'commons-codec-1.9.jar' and store it with the plugin in the 'plugins' directory
 
 Add the following line to the neo4j-server.properties:
 
