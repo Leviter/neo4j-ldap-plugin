@@ -1,0 +1,9 @@
+*.log
+*swp
+*~
+.sonar-ide.properties
+.classpath
+.project
+.settings
+target/
+.idea/
