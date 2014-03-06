@@ -16,6 +16,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<scm>
+		<connection>scm:git:git://github.com/Leviter/neo4j-ldap-plugin.git</connection>
+		<developerConnection>scm:git:git@github.com:Leviter/neo4j-ldap-plugin.git</developerConnection>
+		<url>http://github.com/Leviter/neo4j-ldap-plugin</url>
+	</scm>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.neo4j.app</groupId>
@@ -35,7 +41,6 @@
 			<artifactId>lombok</artifactId>
 			<version>1.12.2</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
